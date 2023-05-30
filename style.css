@@ -1,0 +1,394 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    font-family: Josefin Sans;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: initial;
+    font-weight: normal;
+    font-family: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.body-container {
+    align-items: center; 
+    
+}
+
+.logo {
+    padding: 20px;
+    float: left;   
+}
+
+.logo-svg {
+    width: 100px;
+    height: 22px;
+} 
+
+.hero-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+  
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  
+}
+
+.mobile-image {
+  display: block;
+  object-fit: cover;
+}
+
+.desktop-image {
+  display: none;
+}
+
+.second-container {
+  padding: 0 10px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    line-height: 1;
+}
+
+h1 {
+    font-size: clamp(25px, 5px + 10vw , 40px);
+    letter-spacing: 0.25em;
+}
+
+.text-one {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.text-two, .text-three {
+    font-weight: 600;
+}
+
+.text {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: hsl(0, 36%, 70%);
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.email-form-container {
+  position: relative;
+  text-align: center;
+}
+
+.email-form input[type="email"] {
+    background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%);
+    border: 1px solid hsl(0, 36%, 70%);
+    flex: 1;
+    font-size: 12px;
+    padding: 15px;
+    border-radius: 40px;
+    width: 80%;
+    caret-color: hsl(0, 36%, 70%);
+}
+
+.email-form input[type="email"]:focus {
+  outline: 1px solid hsl(0, 93%, 68%);
+}
+
+
+.email-form input[type="email"]::placeholder {
+    color: hsl(0, 36%, 70%);
+    
+}
+
+form label {
+  position: absolute;
+  top: 20%;
+  right: 30%;
+  display: none;
+}
+
+.errorIcon {
+  width: 12px;
+  height: 12px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px){
+  form label {
+    right: 7rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+  form label {
+    right: 5.4rem;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1975px){
+  form label {
+    right: 8.5rem;
+  }
+}
+
+@media screen and (min-width: 1975px) and (max-width: 2130px) {
+  form label {
+    right: 8.7rem;
+  }
+}
+
+@media screen and (min-width: 2130px) {
+  form label {
+    right: 8.9rem;
+  }
+}
+
+@media screen and (min-width: 2235px){
+  form label {
+    right: 9rem;
+  }
+}
+
+button {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    margin-left: 10px;
+    padding: 11px 20px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 12px hsl(0, 80%, 86%);
+}
+
+button:hover {
+    background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 80%, 86%) 100%);
+    box-shadow: 0px 5px 15px hsl(0, 80%, 86%);
+}
+
+.errorMessage {
+  color: hsl(0, 93%, 68%);
+  text-align: left;
+  margin-top: 0.5rem;
+  margin-left: 10%;
+  font-size: clamp(10px, 1px + 5vw, 12px);
+  display: none;
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  .mobile-image {
+    display: none !important;
+  }
+
+  .desktop-image {
+    display: block;
+    max-width: 230px;
+    height: 350px !important;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main{
+    display: flex;
+    max-width: 600px;
+    max-height: 350px !important;
+  }
+
+  .hero__image {
+    order: 1;
+  }
+
+  .body-container{
+    background: url("/images/bg-pattern-desktop.svg") no-repeat center/cover; 
+  }
+
+  .main-container {
+    padding: 10px 20px 0px 50px;
+    max-width: 360px;
+    max-height: 350px;
+  }
+
+  .logo {
+    padding-left: 50px;
+    padding-top: 20px;
+  }
+
+  .logo-svg {
+    width: 70px;
+    height: 17px;
+  }
+
+  .header-text {
+    align-items: start;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .text {
+    text-align: left;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 11.5px;
+  }
+
+  .email-form-container {
+    text-align: start;
+  }
+
+  .email-form input[type="email"] {
+    padding: 7px;
+    border-radius: 30px;
+    
+  }
+
+  .email-form input[type="email"]::placeholder {
+    font-size: 10px;
+  }
+
+  form label {
+    top: 13%;
+  }
+
+  button {
+    right: 13%;
+    padding: 7px 20px;
+    border-radius: 30px;
+  }
+
+  .icon-arrow {
+    width: 6px;
+    height: 10px;
+  }
+
+  .errorMessage{
+    margin-left: 0;
+    font-size: 10px;
+  }
+
+}
+
+
+@media screen and (min-width: 1000px) {
+  .mobile-image {
+    display: none !important;
+  }
+
+  .desktop-image {
+    display: block;
+    max-width: 410px;
+    height: 500px !important;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main{
+    display: flex;
+    max-width: 1000px;
+    max-height: 500px !important;
+  }
+
+  .hero__image {
+    order: 1;
+  }
+
+  .body-container{
+    background: url("/images/bg-pattern-desktop.svg") no-repeat center/cover; 
+  }
+
+  .main-container {
+    padding: 30px 50px 0px 100px;
+    max-width: 590px;
+    max-height: 500px;
+  }
+
+  .logo {
+    padding-left: 100px;
+    padding-top: 30px;
+  }
+
+  .logo-svg {
+    min-width: 100px;
+    min-height: 25px;
+  }
+
+  .header-text {
+    align-items: start;
+  }
+
+  .text {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .email-form-container {
+    text-align: start;
+  }
+
+  .email-form input[type="email"] {
+    padding: 12px;
+    border-radius: 40px;
+  }
+
+  button {
+    right: 13%;
+    padding: 8px 30px;
+    border-radius: 30px;
+  }
+
+  .errorMessage{
+    margin-left: 0;
+  }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-end;
+    bottom: 0;
+    padding: 5px;
+   
+}  
